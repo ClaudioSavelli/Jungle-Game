@@ -2,11 +2,9 @@ from model.Animal import Animal
 from model.Cell import Cell
 from model.Player import Player
 
-
 class Board:
     def __init__(self, isPlayer1Bot: bool, isPlayer2Bot: bool):
         # Generate the board
-
             self.player1 = Player(1)
             self.player2 = Player(2)
             if isPlayer1Bot == True: self.player1.switchToBot()

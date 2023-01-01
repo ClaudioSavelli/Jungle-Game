@@ -1,9 +1,6 @@
 from model.Board import Board
 
-
 class BoardViewer:
-    ROWS = 9
-    COLUMNS = 7
 
     def __init__(self, board: Board):
         self.board = board
@@ -25,3 +22,9 @@ class BoardViewer:
         else:
             return " XX " if cell.kind == 1 else " ~~ " if cell.kind == 2 else " ## " \
                 if (cell.kind == 3 or cell.kind == 5) else " ** "
+
+    def drawGameState(self, game_state, valid_moves, square_selected):
+
+        self.drawBoard()  # draw squares on the board
+        #self.highlightSquares(game_state, valid_moves, square_selected)
+        self.drawPieces()  # draw pieces on top of those squares

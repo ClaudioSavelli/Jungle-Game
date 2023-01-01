@@ -17,4 +17,5 @@ When we select an AI we can choose its difficulty:
 After selecting the difficulty, you can also select the depth of the search tree.
 
 How to play: 
-When you have to move, you have to type first the name of the animal that you want to move or the first letter of it (e.g. "lion" or "l" or "LION" or "L") and then, after pressing enter, where do you want to move it ("u" or "U" for up, "d" or "D" for down", "r" or "R" for right and "l" or "L" for left).
+Thanks to the UI, to be able to play, just click on the animal you want to move and then click on one of the boxes that are highlighted (which show what are the legal movements that can be carried out by the selected animal), in order to carry out the movement. 
+If during your turn, the letter 'h' is pressed, it is possible to ask our AI for help in order to make the best move. To be able to cancel the selection of the pawn, simply click on it again.

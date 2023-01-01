@@ -17,8 +17,7 @@ class Cell:
     def thereIsAnimal(self):
         if (self.animal != None):
             return True
-        else:
-            return False
+        return False
 
     #def killAnimal(self):
     #    self.animal.x = -1

@@ -1,6 +1,8 @@
 from controller.MovementValidationController import checkIfIsWalkingIntoOwnTrap, specialMovementAnimalsEndingPoint
+from model import Player
 from model.Animal import Animal
 from model.Board import Board
+from model.Move import Move
 
 
 class MovementController:
@@ -61,4 +63,20 @@ class MovementController:
                     if specialMovementAnimalsEndingPoint(animal, board, x, y, animal.getX(), animal.getY()): return str(x)+str(y)
 
         return None
+
+    def listOfPossibleMoves(self, board: Board, animal: Animal):
+            directions = ['u', 'd', 'l', 'r']
+            viableMoves = []
+            if animal.isAlive:
+                for direction in directions:
+                    ep = self.calculateMove(animal, board, direction)
+                    if ep is not None:
+                        viableMoves.append(Move(animal.getX(), animal.getY(), int(ep[0]), int(ep[1]), animal))
+
+            return viableMoves
+
+    def areEqual(self, move1: Move, move2: Move):
+        if ((move1.startingX == move2.startingX) and (move1.startingY == move2.startingY) and (move1.endingX == move2.endingX) and (move1.endingY == move2.endingY)):
+            return True
+        return False
 
